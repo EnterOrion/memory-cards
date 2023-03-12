@@ -56,12 +56,31 @@ header {
   line-height: 1.5;
   margin: 0;
   margin-top: 1rem;
+  gap: 15px;
   grid-template: 200px 200px / 200px 200px 200px 200px;
   place-content: center;
+  background-color: black;
+  padding-bottom: 10px;
 }
 
 .card {
-  height: 10.25rem;
-  width: 11.513rem;
+  height: 100%;
+  width: 100%;
   border: 1px solid white;
+}
+
+.card:hover {
+  border: 1px solid #DF2D2F;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template: 200px 200px 200px 200px / 200px 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template:  200px 200px 200px 200px 200px 200px 200px 200px / 200px;
+  }
 }
