@@ -10,16 +10,41 @@ import Trenton from "../images/trenton.jpg"
 import WhiteRose from "../images/white-rose.jpg"
 
 const Home = () => {
+
+    const [click, setClick] = React.useState(0);
+
+    const clickHandler = () => {
+        setClick(prevClick => prevClick + 1);
+        console.log(click);
+    }
+
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    const cardArray = [ <Card handleClick={clickHandler} id="1" img={Darlene} alt="Darlene" />,
+    <Card handleClick={clickHandler} id="2" img={MrRobot} alt="Mr. Robot" />,
+    <Card handleClick={clickHandler} id="3" img={Elliot} alt="Elliot" />,
+    <Card handleClick={clickHandler} id="4" img={WhiteRose} alt="White Rose" />,
+    <Card handleClick={clickHandler} id="5" img={Angela}  alt="Angela" />,
+    <Card handleClick={clickHandler} id="6" img={Mobley} alt="Mobley" />,
+    <Card handleClick={clickHandler} id="7" img={Trenton} alt="Trenton" />,
+    <Card handleClick={clickHandler} id="8" img={Romero} alt="Romero" />]
+
+    React.useEffect(() => {
+        shuffleArray(cardArray) // Side-effect!
+      }, [click]);
+
+
+    shuffleArray(cardArray);
     return (
         <div className="container">
-           <Card img={Darlene} alt="Darlene" />
-           <Card img={MrRobot} alt="Mr. Robot" />
-           <Card img={Elliot} alt="Elliot" />
-           <Card img={WhiteRose} alt="White Rose" />
-           <Card img={Angela}  alt="Angela" />
-           <Card img={Mobley} alt="Mobley" />
-           <Card img={Trenton} alt="Trenton" />
-           <Card img={Romero} alt="Romero" />
+             {cardArray.map((card) => (
+            card
+      ))}
         </div>
     )
 
