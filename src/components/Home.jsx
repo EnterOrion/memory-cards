@@ -17,15 +17,15 @@ const Home = () => {
     const [topScore, setTopScore] = React.useState(0)
 
     const clickHandler = () => {
+        // if already clicked, return
         setClick(prevClick => prevClick + 1);
         setScore(prevScore => prevScore + 1);
+      
 
     }
 
-    const updateRecordScore = () => {
-        if (score > topScore) {
+    if (score > topScore) {
         setTopScore(score);
-        }
     }
 
     const shuffleArray = (array) => {
@@ -48,9 +48,7 @@ const Home = () => {
         shuffleArray(cardArray) 
       }, [click]);
 
-    React.useEffect(() => {
-        updateRecordScore();
-    }, [score])
+
 
 
     shuffleArray(cardArray);
