@@ -1,4 +1,4 @@
-# Mr. Robot memory game
+# Mr. Robot Memory Game
 
 ## About 
 Click each card to gain a point, but don't click it more than once! <br/>
