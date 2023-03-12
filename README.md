@@ -7,7 +7,9 @@ This was built with React, Javascript, and SASS to practice using hooks and effe
 ## Demo
 
 ## Download 
+```
 git clone https://github.com/EnterOrion/memory-cards.git
 cd memory-cards
 npm install
 npm run start
+```
