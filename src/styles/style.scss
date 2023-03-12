@@ -23,3 +23,45 @@ body {
 p {
     margin: 0;
 }
+
+.logo-img {
+  width: 300px;
+  height: auto;
+}
+
+.title {
+  color: #DF2D2F;
+  font-size: 1rem;
+}
+
+header {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 2.75rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 1rem;
+  grid-template: 200px 200px / 200px 200px 200px 200px;
+  place-content: center;
+}
+
+.card {
+  height: 10.25rem;
+  width: 11.513rem;
+  border: 1px solid white;
+}
