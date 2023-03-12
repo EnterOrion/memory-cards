@@ -9,6 +9,10 @@ import MrRobot from "../images/mr-robot.jpg"
 import Romero from "../images/romero.jpg"
 import Trenton from "../images/trenton.jpg"
 import WhiteRose from "../images/white-rose.jpg"
+import Tyrell from "../images/tyrell.jpg"
+import Gideon from "../images/gideon.jpg"
+import Phillip from "../images/phillip.jpg"
+import Joanna from "../images/joanna.jpg"
 
 const Home = () => {
 
@@ -41,13 +45,19 @@ const Home = () => {
     }
 
     const cardArray = [ <Card handleClick={clickHandler} id="1" img={Darlene} alt="Darlene" />,
-    <Card handleClick={clickHandler} value="2" id="2" img={MrRobot} alt="Mr. Robot" />,
+    <Card handleClick={clickHandler} id="2" img={MrRobot} alt="Mr. Robot" />,
     <Card handleClick={clickHandler} id="3" img={Elliot} alt="Elliot" />,
     <Card handleClick={clickHandler} id="4" img={WhiteRose} alt="White Rose" />,
     <Card handleClick={clickHandler} id="5" img={Angela}  alt="Angela" />,
     <Card handleClick={clickHandler} id="6" img={Mobley} alt="Mobley" />,
     <Card handleClick={clickHandler} id="7" img={Trenton} alt="Trenton" />,
-    <Card handleClick={clickHandler} id="8" img={Romero} alt="Romero" />]
+    <Card handleClick={clickHandler} id="8" img={Romero} alt="Romero" />,
+    <Card handleClick={clickHandler} id="9" img={Tyrell}  alt="Tyrell" />,
+    <Card handleClick={clickHandler} id="10" img={Gideon} alt="Gideon" />,
+    <Card handleClick={clickHandler} id="11" img={Phillip} alt="Phillip" />,
+    <Card handleClick={clickHandler} id="12" img={Joanna} alt="Joanna" />
+
+]
 
     React.useEffect(() => {
         shuffleArray(cardArray) 
