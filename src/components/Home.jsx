@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Score from "./Score";
 import Darlene from "../images/darlene.jpg"
 import Angela from "../images/angela.jpg"
 import Elliot from "../images/elliot.jpg"
@@ -12,10 +13,19 @@ import WhiteRose from "../images/white-rose.jpg"
 const Home = () => {
 
     const [click, setClick] = React.useState(0);
+    const [score, setScore] = React.useState(0);
+    const [topScore, setTopScore] = React.useState(0)
 
     const clickHandler = () => {
         setClick(prevClick => prevClick + 1);
-        console.log(click);
+        setScore(prevScore => prevScore + 1);
+
+    }
+
+    const updateRecordScore = () => {
+        if (score > topScore) {
+        setTopScore(score);
+        }
     }
 
     const shuffleArray = (array) => {
@@ -35,16 +45,23 @@ const Home = () => {
     <Card handleClick={clickHandler} id="8" img={Romero} alt="Romero" />]
 
     React.useEffect(() => {
-        shuffleArray(cardArray) // Side-effect!
+        shuffleArray(cardArray) 
       }, [click]);
+
+    React.useEffect(() => {
+        updateRecordScore();
+    }, [score])
 
 
     shuffleArray(cardArray);
     return (
+        <div>
+        <Score score={score} topScore={topScore}/>
         <div className="container">
              {cardArray.map((card) => (
             card
       ))}
+        </div>
         </div>
     )
 
