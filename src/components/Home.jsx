@@ -13,14 +13,19 @@ import WhiteRose from "../images/white-rose.jpg"
 const Home = () => {
 
     const [click, setClick] = React.useState(0);
+    const [clickedCards, setClickedCards] = React.useState([])
     const [score, setScore] = React.useState(0);
     const [topScore, setTopScore] = React.useState(0)
 
-    const clickHandler = () => {
-        // if already clicked, return
+    const clickHandler = (e) => {
+        if (clickedCards.includes(e.target.alt)) {
+            setScore(0);
+            setClickedCards([]);
+            return;
+        }
+        setClickedCards(prevArray => {return [...prevArray, e.target.alt]})
         setClick(prevClick => prevClick + 1);
         setScore(prevScore => prevScore + 1);
-      
 
     }
 
@@ -36,7 +41,7 @@ const Home = () => {
     }
 
     const cardArray = [ <Card handleClick={clickHandler} id="1" img={Darlene} alt="Darlene" />,
-    <Card handleClick={clickHandler} id="2" img={MrRobot} alt="Mr. Robot" />,
+    <Card handleClick={clickHandler} value="2" id="2" img={MrRobot} alt="Mr. Robot" />,
     <Card handleClick={clickHandler} id="3" img={Elliot} alt="Elliot" />,
     <Card handleClick={clickHandler} id="4" img={WhiteRose} alt="White Rose" />,
     <Card handleClick={clickHandler} id="5" img={Angela}  alt="Angela" />,
