@@ -1,8 +1,7 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  
 html,
 body {
   margin: 0;
@@ -11,17 +10,23 @@ body {
   width: 100%;
 }
 
-
-
 #root {
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    color: white;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  color: white;
 }
 
 p {
-    margin: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
 }
 
 .logo-img {
@@ -30,16 +35,8 @@ p {
 }
 
 .title {
-  color: #DF2D2F;
+  color: #df2d2f;
   font-size: 1rem;
-}
-
-header {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 1rem;
 }
 
 .score {
@@ -70,7 +67,7 @@ header {
 }
 
 .card:hover {
-  border: 1px solid #DF2D2F;
+  border: 1px solid #df2d2f;
 }
 
 @media (max-width: 900px) {
@@ -81,6 +78,6 @@ header {
 
 @media (max-width: 500px) {
   .container {
-    grid-template:  200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px  / 200px;
+    grid-template: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px / 200px;
   }
 }
