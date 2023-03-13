@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8fb9d4e7.css",
+    "main.js": "/static/js/main.9455f048.js",
+    "static/media/darlene.jpg": "/static/media/darlene.2ac14f27adeb6e7f194f.jpg",
+    "static/media/white-rose.jpg": "/static/media/white-rose.7fdeb90442111e1953ef.jpg",
+    "static/media/elliot.jpg": "/static/media/elliot.bef63b3fcaf79ae3171b.jpg",
+    "static/media/phillip.jpg": "/static/media/phillip.3ee8f04eade1f43bb7ee.jpg",
+    "static/media/mr-robot.jpg": "/static/media/mr-robot.d4c4df5d37994eba13e2.jpg",
+    "static/media/Mr._Robot_Logo.svg.png": "/static/media/Mr._Robot_Logo.svg.a6bafd04924843ab4f9c.png",
+    "static/media/romero.jpg": "/static/media/romero.272513ae76d4162e224b.jpg",
+    "static/media/angela.jpg": "/static/media/angela.2fa49bc6682cfbf60ddc.jpg",
+    "static/media/mobley.jpg": "/static/media/mobley.0cb06aead72f46c65daa.jpg",
+    "static/media/joanna.jpg": "/static/media/joanna.77d80ac7fd342912b6b3.jpg",
+    "static/media/tyrell.jpg": "/static/media/tyrell.658aaba79c5c9a3cfafa.jpg",
+    "static/media/gideon.jpg": "/static/media/gideon.d9bb0f981614e1be2b52.jpg",
+    "static/media/trenton.jpg": "/static/media/trenton.be0c0002271704d707f7.jpg",
+    "index.html": "/index.html",
+    "main.8fb9d4e7.css.map": "/static/css/main.8fb9d4e7.css.map",
+    "main.9455f048.js.map": "/static/js/main.9455f048.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fb9d4e7.css",
+    "static/js/main.9455f048.js"
+  ]
+}
